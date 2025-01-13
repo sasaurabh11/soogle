@@ -1,5 +1,4 @@
-import type { Config } from "tailwindcss";
-
+/** @type {import('tailwindcss').Config} */
 export default {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -9,10 +8,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        "dark-purple": { 100: "#282536", 200: "#211E2E", 300: "#1D1B28" },
+        "accent-text": "#ADA6CC",
+        "accent-color": "#383251",
+        "search-blue": "#93B3F2"
+      },
+      fontFamily: {
+        roboto: ["var(--font-roboto)", "sans-serif"],
+        ropaSans: ["var(--font-ropa-sans)", "sans-serif"],
       },
     },
   },
   plugins: [],
-} satisfies Config;
+};
