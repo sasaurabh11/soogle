@@ -21,10 +21,10 @@ export default function Search() {
   );
   const displayQuery = query ? query : "";
   const displayData =
-    (displayQuery == "rumezas-projects" && [...projects]?.reverse()) ||
+    (displayQuery == "Saurabh-projects" && [...projects]?.reverse()) ||
     (displayQuery == "experience" && experiences) ||
     (displayQuery == "life" && [...life]?.reverse()) ||
-    (displayQuery == "why-hire-a-rumeza" && whyHire);
+    (displayQuery == "why-hire-saurabh" && whyHire);
 
   const [showMore, setShowMore] = useState(false);
   const [isOpen, setIsOpen] = useState(project === "meetmidway" ? true : false);
@@ -302,26 +302,26 @@ export default function Search() {
                       </svg>
                     </div>
 
-                    <div className="borber-b border-[0.05rem] border-accent-text border-opacity-50 w-full mt-3" />
+                    <div className=" borber-b border-[0.05rem] border-accent-text border-opacity-50 w-full mt-3" />
                   </div>
                 )}
               </div>
             )}
           </div>
 
-          {displayQuery !== "why-hire-a-rumeza" && (
+          {displayQuery !== "why-hire-saurabh" && (
             <div className="hidden w-1/3 p-2 h-[40rem] border-[0.05rem] border-white border-opacity-30 shadow-xl rounded-lg md:flex flex-col gap-y-3 ">
               <img
                 src={
                   displayQuery == "life"
-                    ? "search-img/life.jpeg"
+                    ? "life.jpeg"
                     : "https://github-readme-stats.vercel.app/api/top-langs/?username=rumezaa&layout=compact&theme=nightowl&hide_border=true&exclude_repo=the-www-blog,clean-water-foundation&langs_count=6"
                 }
-                alt="rumezaa"
+                alt="badal"
                 className="w-full h-[17rem] rounded-t-lg"
               />
 
-              {(displayQuery == "rumezas-projects" && (
+              {(displayQuery == "Saurabh-projects" && (
                 <div className="flex flex-col gap-y-3">
                   <h2 className="opacity-70 text-lg">
                     I love building impact-driven, full-stack projects.{" "}
@@ -392,18 +392,18 @@ export default function Search() {
         {isOpen && <SearchItemOpen data={selectedSearch} />}
       </div>
 
-      {displayQuery == "why-hire-a-rumeza" && !showMore && (
+      {displayQuery == "why-hire-saurabh" && !showMore && (
         <div className="pl-10 md:pl-48 pt-16 flex flex-col gap-y-2">
           <h2 className="text-sm">
-            Your search - <span className="font-bold">why hire a rumeza</span> -
+            Your search - <span className="font-bold">why hire saurabh</span> -
             did not match any documents
           </h2>
           <h2 className="text-sm">Suggestions:</h2>
           <ul className="list-disc pl-5 text-sm">
             <li>
-              Don't search something preposterous (everyone needs a rumeza!)
+              Don't search something preposterous
             </li>
-            <li>Contact Rumeza to learn more</li>
+            <li>Contact saurabh to learn more</li>
           </ul>
         </div>
       )}

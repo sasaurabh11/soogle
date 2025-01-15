@@ -1,6 +1,7 @@
 "use client";
 import { usePathname } from "next/navigation";
 import { useState, useEffect, useRef } from "react";
+import Photo from "./Photo";
 import Link from "next/link";
 
 export default function SearchBar({ query } : any) {
@@ -42,16 +43,21 @@ export default function SearchBar({ query } : any) {
       style={{ zIndex: 80 }}
     >
       {path === "/" && (
-        <h2 className="text-white text-6xl lg:text-7xl xl:text-8xl absolute -top-20 lg:-top-28">
-          Soogle
-        </h2>
+        <div className="absolute -top-44 lg:-top-56">
+          <div className="">
+            <Photo />
+          </div>
+          <h2 className="text-white text-6xl lg:text-7xl xl:text-8xl">
+            Soogle
+          </h2>
+        </div>
       )}
 
       <div
         ref={dropdownRef} // Attach ref to the dropdown container
         className={`flex flex-col items-center shadow-lg ${
           (path !== "/" && "md:absolute w-full top-6 left-48 md:w-2/5 ") ||
-          "absolute w-11/12 md:w-2/3 lg:w-2/5"
+          "absolute lg:top-10 w-11/12 md:w-2/3 lg:w-2/5"
         } ${showSearch ? "rounded-3xl" : "rounded-full"} py-2 bg-accent-color`}
       >
         <div className="flex items-center w-full px-4">
@@ -101,7 +107,7 @@ export default function SearchBar({ query } : any) {
                 tooltip2 ? "block" : "hidden"
               } text-white absolute p-2 rounded-xl px-4 text-xs text-nowrap border border-accent-text border-opacity-40 top-12`}
             >
-              Acha lag raha
+              Nothing bro
             </div>
           </div>
         </div>
