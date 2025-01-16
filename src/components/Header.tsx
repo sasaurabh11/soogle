@@ -238,8 +238,12 @@ export const Header: React.FC<HeaderProps> = ({ setShowMailer }) => {
                     {" "}
                     <h2 className="text-sm text-white">HOW TO USE</h2>
                     <h2>
-                      Explore my projects and journey using{" "}
+                      Explore my projects and resume using{" "}
                       <span className="italic text-white">Search </span>
+                    </h2>
+                    <h2>
+                      Know more about me using{" "}
+                      <span className="italic text-white">About </span>
                     </h2>
                     <h2>
                       Send me a message using{" "}

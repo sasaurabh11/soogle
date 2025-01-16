@@ -1,0 +1,30 @@
+[
+  {
+    "title": "My skills",
+    "alias": "skills",
+    "headline": "Full-stack Developer with expertise in MERN Stack, Next.js",
+    "searchDescription": "Experienced in building scalable web applications using modern technologies like React, Next.js, Node.js, and Flask, with strong problem-solving skills demonstrated through competitive programming",
+    "longDescription": "I've cultivated a strong foundation in Software Development, Web Development, and Competitive Programming. My expertise shines on the frontend, where I craft responsive and engaging interfaces using HTML, CSS, JavaScript, Tailwind, React, and Next.js. On the backend, I build robust and scalable solutions with Node.js, Express.js, Flask, and MongoDB. Additionally, I'm proficient in C, C++, Java, and Python, with experience using development tools like VS Code and Git/Github. My competitive programming achievements include a LeetCode rating of 2003 (Knight, top 2.6%), Codechef rating of 1776 (3 Star), and Codeforces rating of 1448 (Specialist)."
+  },
+  {
+    "title": "My Education",
+    "alias": "education",
+    "headline": "Computer Science Student at IIIT Vadodara",
+    "searchDescription": "Pursuing B.Tech in Computer Science at IIIT Vadodara - International Campus Diu with comprehensive coursework in Data Structures, Algorithms, and Object-Oriented Programming",
+    "longDescription": "I am currently pursuing my B.Tech degree from IIIT Vadodara - ICD (2022 - present). My coursework includes Data Structures, Design and Analysis of Algorithms, and Object-Oriented Programming and Design, computer networks, AI, ML providing me with a strong theoretical foundation alongside my practical skills."
+  },
+  {
+    "title": "Experience",
+    "alias": "experience",
+    "headline": "Software Development Intern at Connexa with proven track record in full-stack development and performance optimization",
+    "searchDescription": "Experienced in developing scalable solutions, improving system performance, and collaborating in agile environments, with notable achievements in reducing bug occurrences and enhancing query handling",
+    "longDescription": "I have over 2 years of experience working with the MERN stack and 1 year specializing in Next.js, focusing on building efficient and scalable web applications. During my internship at Connexa (June 2024 - August 2024), I contributed to the development of full-stack solutions, achieving a 30% reduction in bug occurrences and improving system performance by 30%. I collaborated with teams of 5-10 developers, participated in agile processes, and built systems capable of handling 10K+ queries per minute. Additionally, I have a strong foundation in Data Structures and Algorithms, having spent 2 years solving 1500+ problems across multiple platforms, continuously refining my problem-solving skills."
+  },
+  {
+    "title": "About Me",
+    "alias": "aboutme",
+    "headline": "Passionate Full-stack Developer and Competitive Programmer ",
+    "searchDescription": "Expertise in MERN stack, Next.js, and python, demonstrated through successful internship experience and multiple successful projects",
+    "longDescription": "Hii! I'm Saurabh, a third-year Computer Science student at IIIT Vadodara - ICD. currently navigating the world of BTech, my true passion lies in crafting sleek digital experiences. I've immersed myself in Software Development, Web Development, and Competitive Programming and I've honed my skills in frontend magic with HTML, CSS, JAVASCRIPT , Tailwind, React and Next.js. On the backend, I dance with Node js, Express js, Flask and MongoDB. With over 1500+ DSA problems under my belt, solving complex problems is what keeps me going. I have done a Software Development Intern at Connexa, where I focus on full-stack development using the MERN stack. In addition to that, I have expertise in Next.js, Python Flask, and Java. Join me on this journey as I turn ideas into reality"
+  }
+]

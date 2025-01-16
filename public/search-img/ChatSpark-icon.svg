@@ -1,0 +1,22 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 64 64"
+  width="128"
+  height="128"
+  fill="none"
+>
+  <!-- Chat bubble -->
+  <path
+    d="M32 4C17.664 4 6 14.64 6 28c0 6.648 2.816 12.672 7.424 17.072V54l8.672-4.896A27.896 27.896 0 0 0 32 52c14.336 0 26-10.64 26-24S46.336 4 32 4Z"
+    fill="#5C85FF"
+    stroke="#000"
+    stroke-width="2"
+  />
+  <!-- Spark -->
+  <path
+    d="M35.5 20l-2.5 7h6l-2.5 7 2.5-7h-6l2.5-7Z"
+    fill="#FFC850"
+    stroke="#000"
+    stroke-width="1"
+  />
+</svg>

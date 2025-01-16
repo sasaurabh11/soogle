@@ -10,7 +10,7 @@ export default function SearchBar({ query } : any) {
   const dropdownRef = useRef<HTMLDivElement | null>(null);
   const searches = [
     { search: "Saurabh's projects", param: "Saurabh-projects" },
-    { search: "life", param: "life" },
+    { search: "Resume", param: "resume" },
     { search: "why hire Saurabh", param: "why-hire-saurabh" },
   ];
   const path = usePathname();
@@ -89,7 +89,7 @@ export default function SearchBar({ query } : any) {
             />
             <Link
               className="bg-no-repeat w-5 h-5 bg-cover"
-              href={"https://calendly.com/rumeza/one-on-one"}
+              href={"https://calendly.com/sesaurabh8052/30min"}
               target="_blank"
               onMouseEnter={() => setTooltip(!tooltip)}
               onMouseLeave={() => setTooltip(!tooltip)}

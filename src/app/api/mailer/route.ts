@@ -14,14 +14,14 @@ export async function POST(req : any) {
   let sesClient = null;
 
   try {
-    sesClient = new SESClient({
-      region: "us-east-1", 
-      credentials: {
-        accessKeyId: AWS_ACCESS_KEY,
-        secretAccessKey: AWS_ACCESS_KEY_SECRET,
-      },
-    });
-  } catch (error) {
+    // sesClient = new SESClient({
+    //   region: "us-east-1", 
+    //   credentials: {
+    //     accessKeyId: AWS_ACCESS_KEY,
+    //     secretAccessKey: AWS_ACCESS_KEY_SECRET,
+    //   },
+    // });
+  } catch (error : any) {
     return NextResponse.json(
       { message: "Error connecting to SES", error: error.message },
       { status: 500 }
@@ -59,7 +59,7 @@ export async function POST(req : any) {
       { status: "success", message: "Email sent successfully!", data },
       { status: 200 }
     );
-  } catch (error) {
+  } catch (error : any) {
     console.error("Error occurred:", error.message);
     return NextResponse.json(
       {

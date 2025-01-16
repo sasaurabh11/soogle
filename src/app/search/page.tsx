@@ -4,88 +4,87 @@ import { useSearchParams, useRouter } from "next/navigation";
 import { useState, useRef, useEffect } from "react";
 import projects from "../../data/projects.json";
 import experiences from "../../data/experience.json";
-import life from "../../data/life.json";
-import whyHire from "../../data/why.json";
-import { url } from "inspector";
+import resume from "../../data/resume.json";
+import { Worker, Viewer } from "@react-pdf-viewer/core";
+import { defaultLayoutPlugin } from "@react-pdf-viewer/default-layout";
+import "@react-pdf-viewer/core/lib/styles/index.css";
+import "@react-pdf-viewer/default-layout/lib/styles/index.css";
 
 export default function Search() {
   const [isHover, setIsHover] = useState(false);
+  const defaultLayoutPluginInstance = defaultLayoutPlugin();
   const searchParams = useSearchParams();
   const router = useRouter();
   const query = searchParams.get("q");
   const project = searchParams.get("p");
   const [selectedSearch, setSelectedSearch] = useState(
-    project === "meetmidway"
-      ? projects.find((proj) => proj.alias === "meetmidway")
+    project === "ChatSpark"
+      ? projects.find((proj) => proj.alias === "ChatSpark")
       : ""
   );
   const displayQuery = query ? query : "";
   const displayData =
     (displayQuery == "Saurabh-projects" && [...projects]?.reverse()) ||
     (displayQuery == "experience" && experiences) ||
-    (displayQuery == "life" && [...life]?.reverse()) ||
-    (displayQuery == "why-hire-saurabh" && whyHire);
+    (displayQuery == "resume" && [...resume]?.reverse()) ||
+    (displayQuery == "why-hire-saurabh");
 
   const [showMore, setShowMore] = useState(false);
-  const [isOpen, setIsOpen] = useState(project === "meetmidway" ? true : false);
+  const [isOpen, setIsOpen] = useState(project === "ChatSpark" ? true : false);
   const languages = [
-    "Python",
-    "Java",
+    "c",
     "C++",
+    "Python",
     "JavaScript",
     "Typescript",
     "HTML",
     "CSS",
     "SQL",
-    "Sqlite",
     "Solidity",
-    "Ruby",
-    "XML",
-    "GraphQL",
   ];
   const technologies = [
     "React JS",
-    "React Native",
     "Nodejs",
     "Next JS",
+    "Express JS",
     "Flask",
-    "Django",
     "Tailwind CSS",
-    "Postgres",
-    "Ruby on Rails",
-    "AWS",
-    "Nginx",
-    "Svelte",
-    "pandas",
-    "NumPy",
-    "Matplotlib",
-    "NLTK",
-    "Kivy"
+    "mongo DB",
+    "Block Chain",
   ];
 
   useEffect(() => {
     if (project) {
       const params = new URLSearchParams(searchParams); // Clone the existing searchParams
       params.delete("p"); // Remove 'p' parameter
-  
+
       (router.replace as unknown as (...args: any[]) => void)(
         `?${params.toString()}`,
         undefined,
         { shallow: true }
       );
     }
-  }, [project, searchParams, router]);  
+  }, [project, searchParams, router]);
 
-
-  const handleSelect = (data : any) => {
+  const handleSelect = (data: any) => {
     setIsOpen(true);
     setSelectedSearch(data);
   };
 
-  const SearchItem = ({ data } : {data : any}) => {
+  const SearchItem = ({ data }: { data: any }) => {
+    const [isImageAvailable, setIsImageAvailable] = useState(false);
+
+    useEffect(() => {
+      const imageUrl = `search-img/${data.alias}-icon.svg`;
+      const img = new Image();
+      img.src = imageUrl;
+      img.onload = () => setIsImageAvailable(true); // Image exists
+      img.onerror = () => setIsImageAvailable(false); // Image does not exist
+    }, [data.alias]);
+
     return (
       <div
-        className="font-ropaSans flex flex-row gap-x-2"
+        className="font-ropaSans flex flex-row gap-x-2 mb-4"
         style={{ zIndex: 10 }}
       >
         <div className="w-4/5">
@@ -110,15 +109,19 @@ export default function Search() {
           <h2 className="text-white opacity-50">{data.searchDescription}</h2>
         </div>
 
-        <div
-          className="bg-no-repeat bg-cover w-24 h-24 rounded-md"
-          style={{ backgroundImage: `url(search-img/${data.alias}-icon.png)` }}
-        />
+        {isImageAvailable && (
+          <div
+            className="bg-no-repeat bg-cover w-24 h-24 rounded-md"
+            style={{
+              backgroundImage: `url(search-img/${data.alias}-icon.svg)`,
+            }}
+          />
+        )}
       </div>
     );
   };
 
-  const SearchItemOpen = ({ data } : any) => {
+  const SearchItemOpen = ({ data }: any) => {
     return (
       <div>
         <div className="fixed inset-0 bg-gray-900 bg-opacity-70 z-40 flex items-center justify-center">
@@ -127,24 +130,40 @@ export default function Search() {
           >
             <div className="flex row w-full justify-end mb-2">
               <div
-                className="bg-no-repeat bg-cover w-6 h-6"
+                className="bg-no-repeat bg-cover w-6 h-6 cursor-pointer"
                 style={{ backgroundImage: "url(icons/exit.svg)" }}
                 onClick={() => setIsOpen(false)}
               />
             </div>
 
-            <div
-              className="bg-no-repeat bg-contain bg-center w-full h-2/5 md:h-3/5 rounded-lg"
-              style={{
-                backgroundImage: `url(search-img/${data.alias}-banner.png)`,
-              }}
-            />
+            {data.assests && (
+              <div className="w-full h-2/5 md:h-3/5 rounded-lg">
+                {data.assests && data.assests.endsWith(".mp4") ? (
+                  <video
+                    className="w-full h-full rounded-lg"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                  >
+                    <source src={data.assests} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                ) : (
+                  <img
+                    className="w-full h-full object-cover rounded-lg"
+                    src={data.assests}
+                    alt="Content"
+                  />
+                )}
+              </div>
+            )}
 
             <div className="flex flex-col w-full items-center justify-start h-3/5 p-4 gap-y-2 relative">
               <h2 className="w-full text-2xl">{data.title}</h2>
               <div className={`flex flex-row w-full gap-x-2`}>
-                {displayQuery === "rumezas-projects" &&
-                  data.links.map((link : any, idx : any) => (
+                {displayQuery === "Saurabh-projects" &&
+                  data.links.map((link: any, idx: any) => (
                     <Link
                       className={`flex flex-row py-1.5 px-3 text-sm font-medium text-center items-center gap-x-2 rounded  border border-stone-700 transform transition-all duration-300 ${
                         link.name == "github"
@@ -181,7 +200,7 @@ export default function Search() {
 
               <div className="flex flex-row w-full gap-x-2">
                 {data.type == "project" &&
-                  data.tech.map((stack : any, idx : any) => (
+                  data.tech.map((stack: any, idx: any) => (
                     <div
                       key={idx}
                       className="bg-white bg-opacity-10 text-accent-text text-sm p-1 rounded"
@@ -203,8 +222,9 @@ export default function Search() {
         <div className="borber-b border-[0.05rem] border-white border-opacity-10" />
         <div className="w-full flex flex-row gap-x-20 py-10">
           <div className="flex flex-col gap-y-4 px-4 md:w-1/2  lg:pl-48">
-            {(displayQuery !== "why-hire-a-rumeza" &&  Array.isArray(displayData) &&
-              displayData?.map((data : any, idx : any) => (
+            {(displayQuery !== "why-hire-saurabh" &&
+              Array.isArray(displayData) &&
+              displayData?.map((data: any, idx: any) => (
                 <div key={idx}>
                   <SearchItem data={data} />
                 </div>
@@ -311,24 +331,33 @@ export default function Search() {
 
           {displayQuery !== "why-hire-saurabh" && (
             <div className="hidden w-1/3 p-2 h-[40rem] border-[0.05rem] border-white border-opacity-30 shadow-xl rounded-lg md:flex flex-col gap-y-3 ">
-              <img
-                src={
-                  displayQuery == "life"
-                    ? "life.jpeg"
-                    : "https://github-readme-stats.vercel.app/api/top-langs/?username=rumezaa&layout=compact&theme=nightowl&hide_border=true&exclude_repo=the-www-blog,clean-water-foundation&langs_count=6"
-                }
-                alt="badal"
-                className="w-full h-[17rem] rounded-t-lg"
-              />
+              {displayQuery === "resume" ? (
+                <div className="w-full h-full rounded-t-lg overflow-hidden shadow-lg rpv-core__viewer--dark">
+                  <Worker
+                    workerUrl={`https://unpkg.com/pdfjs-dist@3.0.279/build/pdf.worker.min.js`}
+                  >
+                    <Viewer
+                      fileUrl="Saurabh_Resume.pdf"
+                      plugins={[defaultLayoutPluginInstance]}
+                    />
+                  </Worker>
+                </div>
+              ) : (
+                <img
+                  src="states.svg"
+                  alt="badal"
+                  className="w-full h-[17rem] rounded-t-lg"
+                />
+              )}
 
-              {(displayQuery == "Saurabh-projects" && (
+              {displayQuery == "Saurabh-projects" && (
                 <div className="flex flex-col gap-y-3">
                   <h2 className="opacity-70 text-lg">
                     I love building impact-driven, full-stack projects.{" "}
                   </h2>
                   <h2 className="opacity-70 text-lg">
                     Currently, I'm working on specializing my technical skills
-                    in ML
+                    in MERN stack, Next Js and BlockChain
                   </h2>
 
                   <div className="flex flex-col">
@@ -363,27 +392,6 @@ export default function Search() {
                     </div>
                   </div>
                 </div>
-              )) || (
-                <div className="flex flex-col gap-y-3 p-2">
-                  <h2 className="text-xl">"Lead a life worth telling"</h2>
-                  <h2 className="opacity-70 text-lg">
-                    This is one of my favourite quotes of all times as it
-                    continually motivates me to seek out unqiue, spontaneous
-                    experiences to increase my wordly exposure.
-                  </h2>
-                  <h2 className="opacity-70 text-lg">
-                    The following is an archive of memorable experiences where I
-                    leave my comfort zone to experience something new.
-                  </h2>
-
-                  <h2 className="opacity-70 text-lg">
-                    Warning: I over-romantacize my life a lot.
-                  </h2>
-
-                  <h2 className="opacity-70 text-sm">
-                    (but its more fun that way)
-                  </h2>
-                </div>
               )}
             </div>
           )}
@@ -400,9 +408,7 @@ export default function Search() {
           </h2>
           <h2 className="text-sm">Suggestions:</h2>
           <ul className="list-disc pl-5 text-sm">
-            <li>
-              Don't search something preposterous
-            </li>
+            <li>Don't search something preposterous</li>
             <li>Contact saurabh to learn more</li>
           </ul>
         </div>
