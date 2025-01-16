@@ -43,6 +43,11 @@ export const Header: React.FC<HeaderProps> = ({ setShowMailer }) => {
       url: "https://www.linkedin.com/in/11-saurabh-jaiswar/",
     },
     {
+      text: "portfolio",
+      icon: "portfolioicon.jpg",
+      url: "https://saurabh-jaiswar.vercel.app/",
+    },
+    {
       text: "leetcode",
       icon: "leetcode.png",
       url: "https://leetcode.com/u/sasaurabh11/",

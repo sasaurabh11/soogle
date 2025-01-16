@@ -27,7 +27,7 @@ export default function Search() {
     (displayQuery == "Saurabh-projects" && [...projects]?.reverse()) ||
     (displayQuery == "experience" && experiences) ||
     (displayQuery == "resume" && [...resume]?.reverse()) ||
-    (displayQuery == "why-hire-saurabh");
+    displayQuery == "why-hire-saurabh";
 
   const [showMore, setShowMore] = useState(false);
   const [isOpen, setIsOpen] = useState(project === "ChatSpark" ? true : false);
@@ -247,14 +247,15 @@ export default function Search() {
                     <>
                       <h2>
                         <span className="bg-[#735B95] py-1">
-                          I transform environments.
+                          I bring a unique blend of technical expertise,
+                          problem-solving, and innovation.
                         </span>
                       </h2>
                       <h2 className="">
                         <span className="bg-[#735B95]  py-1">
                           seeking global opportunities to specialize in emerging
-                          technologies and apply my skills in software, project
-                          management, and design thinking
+                          technologies and apply my skills in software, and take
+                          on new challenges
                         </span>
                       </h2>
                     </>
@@ -263,40 +264,36 @@ export default function Search() {
                   <h2>
                     Ever since I learned how to program, my life’s purpose has
                     been to use my technical expertise to transform the
-                    environments around me. My technical and project management
-                    skills, combined with my design-thinking approach, have
-                    enabled me to consistently exceed expectations and deliver
-                    impactful results.
+                    environments around me. My technical, combined with my
+                    design-thinking approach, have enabled me to consistently
+                    exceed expectations and deliver impactful results.
                   </h2>
 
                   <h2>
-                    In every role, I’ve sought unique opportunities to rise
-                    above challenges and push the boundaries of what’s possible.
-                    At Arcurve, I pitched and developed a recruitment feature
-                    with the potential to become a critical data-collection
-                    asset. Currently, as the youngest developer at Symbiotic AI,
-                    I’ve been deeply involved in achieving major product
-                    milestones, including deploying our platform via AWS,
-                    integrating EPIC API services, and designing interfaces for
-                    cardiologists to enhance revascularization decisions.
+                    I am a skilled and passionate software developer with a
+                    strong foundation in data structures, algorithms, and
+                    full-stack web development. With extensive hands-on
+                    experience in modern technologies such as Next.js, Node.js,
+                    MongoDB, and React, I am well-equipped to tackle complex
+                    technical challenges and contribute meaningfully to your
+                    team’s success.
                   </h2>
 
                   <h2>
-                    My consulting efforts with companies like CIBC and Amazon
-                    Alexa have led to product ideas being considered for
-                    implementation, showcasing my skill in identifying
-                    opportunities and delivering value.
+                    My consulting efforts with companies like Connexa have led
+                    to product ideas being considered for implementation,
+                    showcasing my skill in identifying opportunities and
+                    delivering value.
                   </h2>
 
                   <h2>
-                    While my technical experiences are vast, I deeply value
-                    opportunities to broaden my exposure to the challenges and
-                    perspectives of diverse communities worldwide. I am seeking
-                    global opportunities to specialize in emerging technologies
-                    and apply my skills in software, project management, and
-                    design thinking to improve lives while broadening my
-                    understanding of how people around the world navigate and
-                    overcome challenges.
+                    What sets me apart is my dedication to continuous learning
+                    and growth. I’m always eager to explore new technologies and
+                    frameworks, and I am committed to applying my skills to help
+                    companies stay ahead in an ever-evolving tech landscape. If
+                    you're looking for a motivated, adaptable, and innovative
+                    developer who can bring fresh ideas to the table and help
+                    you drive success, I’m the right fit.
                   </h2>
 
                   {!showMore && (
