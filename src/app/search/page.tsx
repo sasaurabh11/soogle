@@ -9,6 +9,7 @@ import { Worker, Viewer } from "@react-pdf-viewer/core";
 import { defaultLayoutPlugin } from "@react-pdf-viewer/default-layout";
 import "@react-pdf-viewer/core/lib/styles/index.css";
 import "@react-pdf-viewer/default-layout/lib/styles/index.css";
+import Image from "next/image";
 
 export default function Search() {
   const [isHover, setIsHover] = useState(false);
@@ -75,11 +76,13 @@ export default function Search() {
     const [isImageAvailable, setIsImageAvailable] = useState(false);
 
     useEffect(() => {
+      if(typeof window !== "undefined") {
       const imageUrl = `search-img/${data.alias}-icon.svg`;
-      const img = new Image();
+      const img = new window.Image();
       img.src = imageUrl;
       img.onload = () => setIsImageAvailable(true); // Image exists
       img.onerror = () => setIsImageAvailable(false); // Image does not exist
+      }
     }, [data.alias]);
 
     return (
@@ -150,7 +153,7 @@ export default function Search() {
                     Your browser does not support the video tag.
                   </video>
                 ) : (
-                  <img
+                  <Image
                     className="w-full h-full object-cover rounded-lg"
                     src={data.assests}
                     alt="Content"
@@ -340,7 +343,7 @@ export default function Search() {
                   </Worker>
                 </div>
               ) : (
-                <img
+                <Image
                   src="states.svg"
                   alt="badal"
                   className="w-full h-[17rem] rounded-t-lg"
