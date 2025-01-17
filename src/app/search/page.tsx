@@ -5,11 +5,11 @@ import { useState, useRef, useEffect } from "react";
 import projects from "../../data/projects.json";
 import experiences from "../../data/experience.json";
 import resume from "../../data/resume.json";
+import Image from "next/image";
 import { Worker, Viewer } from "@react-pdf-viewer/core";
 import { defaultLayoutPlugin } from "@react-pdf-viewer/default-layout";
 import "@react-pdf-viewer/core/lib/styles/index.css";
-import "@react-pdf-viewer/default-layout/lib/styles/index.css";
-import Image from "next/image";
+import "@react-pdf-viewer/default-layout/lib/styles/index.css"
 
 export default function Search() {
   const [isHover, setIsHover] = useState(false);
@@ -76,12 +76,12 @@ export default function Search() {
     const [isImageAvailable, setIsImageAvailable] = useState(false);
 
     useEffect(() => {
-      if(typeof window !== "undefined") {
-      const imageUrl = `search-img/${data.alias}-icon.svg`;
-      const img = new window.Image();
-      img.src = imageUrl;
-      img.onload = () => setIsImageAvailable(true); // Image exists
-      img.onerror = () => setIsImageAvailable(false); // Image does not exist
+      if (typeof window !== "undefined") {
+        const imageUrl = `search-img/${data.alias}-icon.svg`;
+        const img = new window.Image();
+        img.src = imageUrl;
+        img.onload = () => setIsImageAvailable(true); // Image exists
+        img.onerror = () => setIsImageAvailable(false); // Image does not exist
       }
     }, [data.alias]);
 
@@ -342,8 +342,10 @@ export default function Search() {
                     />
                   </Worker>
                 </div>
-              ) : (
+              ): (
                 <Image
+                  width={500}
+                  height={500}
                   src="states.svg"
                   alt="badal"
                   className="w-full h-[17rem] rounded-t-lg"
