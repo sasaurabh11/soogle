@@ -9,7 +9,7 @@ import Image from "next/image";
 import { Worker, Viewer } from "@react-pdf-viewer/core";
 import { defaultLayoutPlugin } from "@react-pdf-viewer/default-layout";
 import "@react-pdf-viewer/core/lib/styles/index.css";
-import "@react-pdf-viewer/default-layout/lib/styles/index.css"
+import "@react-pdf-viewer/default-layout/lib/styles/index.css";
 
 export default function Search() {
   const [isHover, setIsHover] = useState(false);
@@ -156,8 +156,8 @@ export default function Search() {
                   <Image
                     className="w-full h-full object-cover rounded-lg"
                     src={data.assests}
-                    width={500}
-                    height={500}
+                    width={2000}
+                    height={2000}
                     alt="Content"
                   />
                 )}
@@ -344,7 +344,7 @@ export default function Search() {
                     />
                   </Worker>
                 </div>
-              ): (
+              ) : (
                 <Image
                   width={500}
                   height={500}

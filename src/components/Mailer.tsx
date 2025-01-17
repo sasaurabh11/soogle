@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import axios from "axios";
+import { Button } from "./ui/button";
 
 export default function Mailer({ isExpand, setIsExpand, setIsOpen, isOpen } : any) {
   const [email, setEmail] = useState("");
@@ -24,7 +25,6 @@ export default function Mailer({ isExpand, setIsExpand, setIsOpen, isOpen } : an
         bcc,
       });
 
-      // Assuming the response status is in the form of a standard HTTP status code
       if (response.status === 200) {
         setResp("Email sent successfuly! I'll get to you in bit.");
         setTimeout(() => {
@@ -57,7 +57,7 @@ export default function Mailer({ isExpand, setIsExpand, setIsOpen, isOpen } : an
 
   return (
     <div
-      className={` font-ropaSans bg-white w-4/5 h-4/5 ${
+      className={` font-ropaSans bg-[#b7b2cb] w-4/5 h-4/5 ${
         isMinimize
           ? "md:w-[25rem]"
           : `${isExpand ? "md:w-4/5 md:h-4/5" : "md:w-[35rem] md:h-[35rem]"} `
@@ -68,7 +68,7 @@ export default function Mailer({ isExpand, setIsExpand, setIsOpen, isOpen } : an
         <h2>New Message</h2>
         <div className={`flex flex-row items-end gap-x-2`}>
           <div
-            className={`mr-1 hidden md:block ${isMinimize && "pb-3"}`}
+            className={`mr-1 hidden md:block ${isMinimize && "pb-3"} cursor-pointer`}
             onClick={() => {
               setIsExpand(false);
               setMinimize(!isMinimize);
@@ -77,7 +77,7 @@ export default function Mailer({ isExpand, setIsExpand, setIsOpen, isOpen } : an
             _
           </div>
           <div
-            className={` hidden md:block bg-no-repeat bg-cover
+            className={`cursor-pointer hidden md:block bg-no-repeat bg-cover
         ${!isExpand ? "rotate-45 w-5 h-5  " : " w-4 h-4"}`}
             onClick={() => {
               setMinimize(false);
@@ -90,7 +90,7 @@ export default function Mailer({ isExpand, setIsExpand, setIsOpen, isOpen } : an
             }}
           />
           <div
-            className="bg-no-repeat bg-cover w-5 h-5"
+            className="bg-no-repeat bg-cover w-5 h-5 cursor-pointer"
             onClick={() => setIsOpen(false)}
             style={{ backgroundImage: "url(icons/exit.svg)" }}
           />
@@ -189,13 +189,9 @@ export default function Mailer({ isExpand, setIsExpand, setIsOpen, isOpen } : an
             {resp}
           </h2>
         )}
-
-        <button
-          type="submit"
-          className="bg-accent-color rounded-full w-20 flex items-center p-2 justify-end text-white"
-        >
-          Send
-        </button>
+        <Button className="bg-accent-color text-white hover:text-black hover:bg-pink-500" variant="ghost">
+          send
+        </Button>
       </form>
     </div>
   );
