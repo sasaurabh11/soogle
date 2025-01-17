@@ -10,7 +10,7 @@ export default function Mailer({ isExpand, setIsExpand, setIsOpen, isOpen } : an
   const [subject, setSubject] = useState("");
   const [ccOpen, setCCOpen] = useState(false);
   const [bccOpen, setBCCOpen] = useState(false);
-  const [resp, setResp] = useState();
+  const [resp, setResp] = useState<string | undefined>(undefined);
   const [isMinimize, setMinimize] = useState(false);
   const handleContact = async (e : any) => {
     e.preventDefault();

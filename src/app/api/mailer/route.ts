@@ -1,3 +1,4 @@
+import axios from "axios";
 import { NextResponse } from "next/server";
 
 export async function POST(req: any) {
@@ -21,22 +22,18 @@ export async function POST(req: any) {
       bcc: bcc || "",
     };
 
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    });
+    const response = await axios.post("https://api.web3forms.com/submit", payload);
 
-    const responseData = await response.json();
+    const responseData = await response.data;
 
-    if (response.ok) {
+    if (response.statusText == 'OK') {
       return NextResponse.json(
         { status: "success", message: "Email sent successfully!", data: responseData },
         { status: 200 }
       );
     } else {
       return NextResponse.json(
-        { status: "error", message: "Failed to send email", error: responseData },
+        { status: "error", message: "Failed to send email", error: response },
         { status: response.status }
       );
     }
