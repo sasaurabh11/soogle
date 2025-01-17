@@ -156,6 +156,8 @@ export default function Search() {
                   <Image
                     className="w-full h-full object-cover rounded-lg"
                     src={data.assests}
+                    width={500}
+                    height={500}
                     alt="Content"
                   />
                 )}
