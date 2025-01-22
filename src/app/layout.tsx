@@ -39,8 +39,7 @@ export default function RootLayout({
         <title>soogle</title>
 
         <meta property="og:title" content="soogle" />
-        <meta property="og:description" content="everything you'll ever need" />
-        <meta property="og:image" content="./bg-photo.jpg" />
+        <meta property="og:image" content="https://res.cloudinary.com/dz41q2wez/image/upload/v1737544981/bg-photo_nuemvq.jpg" />
         <meta property="og:url" content="https://saurabh-jaiswar.netlify.app/" />
         <meta property="og:type" content="website" />
       </head>
