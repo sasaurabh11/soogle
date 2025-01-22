@@ -40,6 +40,9 @@ export default function RootLayout({
 
         <meta property="og:title" content="soogle" />
         <meta property="og:description" content="everything you'll ever need" />
+        <meta property="og:image" content="./bg-photo.jpg" />
+        <meta property="og:url" content="https://saurabh-jaiswar.netlify.app/" />
+        <meta property="og:type" content="website" />
       </head>
 
       <body className="flex flex-col min-h-screen relative">
