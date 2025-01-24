@@ -42,6 +42,7 @@ export default function RootLayout({
         <meta property="og:image" content="https://res.cloudinary.com/dz41q2wez/image/upload/v1737544981/bg-photo_nuemvq.jpg" />
         <meta property="og:url" content="https://saurabh-jaiswar.netlify.app/" />
         <meta property="og:type" content="website" />
+        <meta property="og:description" content="My portfolio website" />
       </head>
 
       <body className="flex flex-col min-h-screen relative">
