@@ -77,10 +77,8 @@ export const Header: React.FC<HeaderProps> = ({ setShowMailer }) => {
       }
     };
   
-    // Add event listener for clicks outside
     document.addEventListener("click", handleClickOutside);
   
-    // Cleanup on component unmount
     return () => {
       document.removeEventListener("click", handleClickOutside);
     };

@@ -12,6 +12,18 @@
       "links": [{"link": "https://github.com/sasaurabh11/ComapanyDetails", "name": "github", "url": "github-outline.svg" , "urlHover": "github-outline.svg"}, {"link": "https://comapany-directory.vercel.app/", "name": "check it out", "url": "link-outline.svg" , "urlHover": "link-outline.svg"}]
     },
     {
+      "title": "Flight Finder",
+      "alias": "FlightFinder",
+      "headline": "Easily search and compare flight prices",
+      "timeline": "February 2025",
+      "type": "project",
+      "tech": ["React", "Express.js", "Clerk Authentication", "MongoDB"],
+      "searchDescription": "Find the best flight prices for one-way and round trips",
+      "longDescription": "Flight Finder is a web application that allows users to search for flight prices from their origin to destination. It supports both one-way and round-trip searches, providing accurate fare details for different routes. The app features a seamless authentication system powered by Clerk, ensuring secure user sessions. Built with React for the frontend and Express.js for the backend, it delivers a smooth and responsive experience for travelers looking to compare and book flights effortlessly.",
+      "assests": "/FlightFinder.png",
+      "links": [{"link": "https://github.com/sasaurabh11/flight-api", "name": "github", "url": "github-outline.svg" , "urlHover": "github-outline.svg"}, {"link": "https://flight-api-blond.vercel.app", "name": "check it out", "url": "link-outline.svg" , "urlHover": "link-outline.svg"}]
+    },
+    {
       "title": "Role-Based Access Control",
       "alias": "RBAC",
       "headline": "A place to manage your employee",
@@ -24,9 +36,21 @@
       "links": [{"link": "https://github.com/sasaurabh11/Role-Based-Access-control", "name": "github", "url": "github-outline.svg" , "urlHover": "github-outline.svg"}, {"link": "https://role-based-access-control-three.vercel.app/", "name": "check it out", "url": "link-outline.svg" , "urlHover": "link-outline.svg"}]
     },
     {
+      "title": "Drive App",
+      "alias": "DriveApp",
+      "headline": "Effortlessly create, edit, and save letters to Google Drive",
+      "timeline": "February 2025",
+      "type": "project",
+      "tech": ["React", "Node.js", "Express", "MongoDB", "Google OAuth", "Google Drive API"],
+      "searchDescription": "Create and manage letters with Google Drive integration",
+      "longDescription": "Drive App is a full-stack web application that enables users to sign up and log in using Google authentication, create and edit text-based letters, and save them directly to their Google Drive as Google Docs files. It features a simple text editor for letter creation, secure JWT-based session management, and an intuitive letter management system that provides easy access to saved documents with direct Google Drive links. Built with modern web technologies, the app ensures a smooth and efficient document management experience.",
+      "assests": "/drive-app.png",
+      "links": [{"link": "https://github.com/sasaurabh11/Drive-app", "name": "github", "url": "github-outline.svg" , "urlHover": "github-outline.svg"}, {"link": "https://drive-app-roan.vercel.app", "name": "check it out", "url": "link-outline.svg" , "urlHover": "link-outline.svg"}]
+    },
+    {
       "title": "SnapSizzle",
       "alias": "SnapSizzle",
-      "headline": "Now You can send snaps very easily, check out",
+      "headline": "From SnapSizzle You can send snaps very easily",
       "timeline": "March 2024",
       "type": "project",
       "tech": ["Next.js", "Tailwind", "Material UI"],
@@ -38,7 +62,7 @@
     {
       "title": "ChatSpark",
       "alias": "ChatSpark",
-      "headline": "When Passion Meets Deadlines: CS Enthusiasts Build a High-Traffic Chat Platform in Just 14 Days",
+      "headline": "ChatSpark is a real time chat application where people can talk to each other and make friends.",
       "timeline": "July 2024",
       "type": "project",
       "tech": ["React.js", "Tailwind", "Express.js", "MongoDb"],
@@ -46,6 +70,18 @@
       "longDescription": "ChatSpark is a real-time chat platform built with the MERN stack, Socket.io, and Material UI. It offers seamless instant messaging, multimedia sharing, and real-time online status updates. The application is designed to handle high traffic, providing a smooth and responsive user experience through a reliable and scalable communication system.", 
       "assests" : "https://res.cloudinary.com/dz41q2wez/video/upload/v1726757542/fwng9hur4zyqgz0fwdw6.mp4",
       "links": [{"link": "https://github.com/sasaurabh11/ChatSpark-Real-Time-Chat-App", "name": "github", "url": "github-outline.svg" , "urlHover": "github-outline.svg"}, {"link": "https://chat-spark-app.vercel.app/", "name": "check it out", "url": "link-outline.svg" , "urlHover": "link-outline.svg"}]
+    },
+    {
+      "title": " SmartGenie - AI",
+      "alias": "SmartGenie",
+      "headline": "SmartGenie is an innovative AI platform redefining intelligence and automation.",
+      "timeline": "January 2025 - February 2025",
+      "type": "project",
+      "tech": ["React.js", "Tailwind", "Express.js", "MongoDb", "AI"],
+      "searchDescription": "From SmartGenie You can generate realistic images and summarize any website and also ask your doubts from smartgenie chatbot",
+      "longDescription": "SmartGenie a comprehensive full-stack AI SaaS platform using React and Express, designed to provide seamless AI-powered solutions for image generation, website summarization, and automated video creation. Integrated a real-time AI chatbot that allows users to ask questions instantly, alongside an intelligent web scraping and summarization system that efficiently transforms web content into concise summaries. Implemented an advanced short video creation feature with audio narration using FFMPEG.", 
+      "assests" : "https://res.cloudinary.com/dz41q2wez/video/upload/v1741804212/Recording_2025-03-12_234241_iu1768.mp4",
+      "links": [{"link": "https://github.com/sasaurabh11/SmartGenie", "name": "github", "url": "github-outline.svg" , "urlHover": "github-outline.svg"}, {"link": "https://smart-genie-ai.vercel.app", "name": "check it out", "url": "link-outline.svg" , "urlHover": "link-outline.svg"}]
     }
   
   ]

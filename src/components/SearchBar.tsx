@@ -25,7 +25,7 @@ export default function SearchBar({ query } : any) {
   useEffect(() => {
     const handleClickOutside = (event : any) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        setShowSearch(false); // Close the dropdown
+        setShowSearch(false);
       }
     };
 
@@ -54,7 +54,7 @@ export default function SearchBar({ query } : any) {
       )}
 
       <div
-        ref={dropdownRef} // Attach ref to the dropdown container
+        ref={dropdownRef} 
         className={`flex flex-col items-center shadow-lg ${
           (path !== "/" && "md:absolute w-full top-6 left-48 md:w-2/5 ") ||
           "absolute lg:top-10 w-11/12 md:w-2/3 lg:w-2/5"
@@ -124,7 +124,7 @@ export default function SearchBar({ query } : any) {
                 href={`/search?q=${encodeURIComponent(item.param)}`}
                 key={idx}
                 onClick={() => {
-                  setShowSearch(false); // Hide dropdown
+                  setShowSearch(false); 
                 }}
               >
                 <div

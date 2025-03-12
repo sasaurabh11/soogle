@@ -18,7 +18,6 @@ function Photo() {
           />
         </div>
 
-        {/* Rotating SVG */}
         <motion.svg
           className="w-[101px] h-[101px] xl:w-[150px] xl:h-[150px]"
           fill="transparent"

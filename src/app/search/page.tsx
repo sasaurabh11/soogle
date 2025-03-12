@@ -56,8 +56,8 @@ export default function Search() {
 
   useEffect(() => {
     if (project) {
-      const params = new URLSearchParams(searchParams); // Clone the existing searchParams
-      params.delete("p"); // Remove 'p' parameter
+      const params = new URLSearchParams(searchParams); 
+      params.delete("p"); 
 
       (router.replace as unknown as (...args: any[]) => void)(
         `?${params.toString()}`,
@@ -80,8 +80,8 @@ export default function Search() {
         const imageUrl = `search-img/${data.alias}-icon.svg`;
         const img = new window.Image();
         img.src = imageUrl;
-        img.onload = () => setIsImageAvailable(true); // Image exists
-        img.onerror = () => setIsImageAvailable(false); // Image does not exist
+        img.onload = () => setIsImageAvailable(true); 
+        img.onerror = () => setIsImageAvailable(false); 
       }
     }, [data.alias]);
 
@@ -129,7 +129,7 @@ export default function Search() {
       <div>
         <div className="fixed inset-0 bg-gray-900 bg-opacity-70 z-40 flex items-center justify-center">
           <div
-            className={`p-2 flex flex-col items-center h-4/5 w-11/12 md:w-4/5 lg:w-3/5 bg-accent-color rounded-lg shadow-lg z-50 transform transition-transform duration-300 ease-in-out`}
+            className={`p-2 flex flex-col items-center h-[90vh] w-11/12 md:w-4/5 lg:w-3/5 bg-accent-color rounded-lg shadow-lg z-50 transform transition-transform duration-300 ease-in-out`}
           >
             <div className="flex row w-full justify-end mb-2">
               <div
