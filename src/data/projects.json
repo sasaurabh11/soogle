@@ -1,89 +1,92 @@
 [
-    {
-      "title": "Company Directory App",
-      "alias": "CDA",
-      "headline": "an adaptive platform built using React.js and Flask",
-      "timeline": "January 2024",
-      "type": "project",
-      "tech": ["Flask"," React.js"],
-      "searchDescription": "An adaptive platform built using React.js and Flask",
-      "longDescription" : "The Company Directory App is an adaptive platform built using React.js and Flask, designed for seamless user interaction. It integrates RESTful APIs to manage data efficiently with MongoDB, ensuring smooth CRUD operations. With Axios and CORS, the app handles secure HTTP requests and manages cross-origin communication, providing a responsive and secure experience for users.",
-      "assests" : "/company-directory.png",
-      "links": [{"link": "https://github.com/sasaurabh11/ComapanyDetails", "name": "github", "url": "github-outline.svg" , "urlHover": "github-outline.svg"}, {"link": "https://comapany-directory.vercel.app/", "name": "check it out", "url": "link-outline.svg" , "urlHover": "link-outline.svg"}]
-    },
-    {
-      "title": "Flight Finder",
-      "alias": "FlightFinder",
-      "headline": "Easily search and compare flight prices",
-      "timeline": "February 2025",
-      "type": "project",
-      "tech": ["React", "Express.js", "Clerk Authentication", "MongoDB"],
-      "searchDescription": "Find the best flight prices for one-way and round trips",
-      "longDescription": "Flight Finder is a web application that allows users to search for flight prices from their origin to destination. It supports both one-way and round-trip searches, providing accurate fare details for different routes. The app features a seamless authentication system powered by Clerk, ensuring secure user sessions. Built with React for the frontend and Express.js for the backend, it delivers a smooth and responsive experience for travelers looking to compare and book flights effortlessly.",
-      "assests": "/FlightFinder.png",
-      "links": [{"link": "https://github.com/sasaurabh11/flight-api", "name": "github", "url": "github-outline.svg" , "urlHover": "github-outline.svg"}, {"link": "https://flight-api-blond.vercel.app", "name": "check it out", "url": "link-outline.svg" , "urlHover": "link-outline.svg"}]
-    },
-    {
-      "title": "Role-Based Access Control",
-      "alias": "RBAC",
-      "headline": "A place to manage your employee",
-      "timeline": "Nov 2024",
-      "type": "project",
-      "tech": ["React.js","Express.js", "MongoDb"],
-      "searchDescription": "A secure and intuitive platform for managing users, roles, and permissions with dynamic access control.",
-      "longDescription": "Role-Based Access Control (RBAC) Application is a robust platform designed to streamline user and role management while enhancing security and operational efficiency. Built with React.js, Redux, and Axios for the frontend, and optionally powered by Node.js and Express.js for backend API simulation, this application enables seamless CRUD operations on users, roles, and permissions. Featuring JWT-based authentication, it ensures secure sessions and precise access control. With its intuitive UI, administrators can dynamically assign roles, manage permissions, and simulate API calls, making it an essential tool for scalable and flexible access management systems.", 
-      "assests" : "https://res.cloudinary.com/dz41q2wez/image/upload/v1736971899/Screenshot_2025-01-16_013934_im7roa.png",
-      "links": [{"link": "https://github.com/sasaurabh11/Role-Based-Access-control", "name": "github", "url": "github-outline.svg" , "urlHover": "github-outline.svg"}, {"link": "https://role-based-access-control-three.vercel.app/", "name": "check it out", "url": "link-outline.svg" , "urlHover": "link-outline.svg"}]
-    },
-    {
-      "title": "Drive App",
-      "alias": "DriveApp",
-      "headline": "Effortlessly create, edit, and save letters to Google Drive",
-      "timeline": "February 2025",
-      "type": "project",
-      "tech": ["React", "Node.js", "Express", "MongoDB", "Google OAuth", "Google Drive API"],
-      "searchDescription": "Create and manage letters with Google Drive integration",
-      "longDescription": "Drive App is a full-stack web application that enables users to sign up and log in using Google authentication, create and edit text-based letters, and save them directly to their Google Drive as Google Docs files. It features a simple text editor for letter creation, secure JWT-based session management, and an intuitive letter management system that provides easy access to saved documents with direct Google Drive links. Built with modern web technologies, the app ensures a smooth and efficient document management experience.",
-      "assests": "/drive-app.png",
-      "links": [{"link": "https://github.com/sasaurabh11/Drive-app", "name": "github", "url": "github-outline.svg" , "urlHover": "github-outline.svg"}, {"link": "https://drive-app-roan.vercel.app", "name": "check it out", "url": "link-outline.svg" , "urlHover": "link-outline.svg"}]
-    },
-    {
-      "title": "SnapSizzle",
-      "alias": "SnapSizzle",
-      "headline": "From SnapSizzle You can send snaps very easily",
-      "timeline": "March 2024",
-      "type": "project",
-      "tech": ["Next.js", "Tailwind", "Material UI"],
-      "searchDescription": "send snap smoothly <3)",
-      "longDescription": "SnapSizzle is a dynamic snap application built with Next.js, offering user-to-user messaging with text and photos. It features media sharing for seamless snap exchanges and real-time notifications to keep users updated on new messages and snaps. The app is designed for efficient performance with server-side rendering, providing an engaging and responsive user experience.", 
-      "assests" : "https://res.cloudinary.com/dz41q2wez/video/upload/v1726757933/zsa6rooi3sgosbjv7hpg.mp4",
-      "links": [{"link": "https://github.com/sasaurabh11/SnapSizzle", "name": "github", "url": "github-outline.svg" , "urlHover": "github-outline.svg"}, {"link": "https://snap-sizzle.vercel.app/", "name": "check it out", "url": "link-outline.svg" , "urlHover": "link-outline.svg"}]
-    },
-    {
-      "title": "ChatSpark",
-      "alias": "ChatSpark",
-      "headline": "ChatSpark is a real time chat application where people can talk to each other and make friends.",
-      "timeline": "July 2024",
-      "type": "project",
-      "tech": ["React.js", "Tailwind", "Express.js", "MongoDb"],
-      "searchDescription": "You can communicate with your loved ones",
-      "longDescription": "ChatSpark is a real-time chat platform built with the MERN stack, Socket.io, and Material UI. It offers seamless instant messaging, multimedia sharing, and real-time online status updates. The application is designed to handle high traffic, providing a smooth and responsive user experience through a reliable and scalable communication system.", 
-      "assests" : "https://res.cloudinary.com/dz41q2wez/video/upload/v1726757542/fwng9hur4zyqgz0fwdw6.mp4",
-      "links": [{"link": "https://github.com/sasaurabh11/ChatSpark-Real-Time-Chat-App", "name": "github", "url": "github-outline.svg" , "urlHover": "github-outline.svg"}, {"link": "https://chat-spark-app.vercel.app/", "name": "check it out", "url": "link-outline.svg" , "urlHover": "link-outline.svg"}]
-    },
-    {
-      "title": " SmartGenie - AI",
-      "alias": "SmartGenie",
-      "headline": "SmartGenie is an innovative AI platform redefining intelligence and automation.",
-      "timeline": "January 2025 - February 2025",
-      "type": "project",
-      "tech": ["React.js", "Tailwind", "Express.js", "MongoDb", "AI"],
-      "searchDescription": "From SmartGenie You can generate realistic images and summarize any website and also ask your doubts from smartgenie chatbot",
-      "longDescription": "SmartGenie a comprehensive full-stack AI SaaS platform using React and Express, designed to provide seamless AI-powered solutions for image generation, website summarization, and automated video creation. Integrated a real-time AI chatbot that allows users to ask questions instantly, alongside an intelligent web scraping and summarization system that efficiently transforms web content into concise summaries. Implemented an advanced short video creation feature with audio narration using FFMPEG.", 
-      "assests" : "https://res.cloudinary.com/dz41q2wez/video/upload/v1741804212/Recording_2025-03-12_234241_iu1768.mp4",
-      "links": [{"link": "https://github.com/sasaurabh11/SmartGenie", "name": "github", "url": "github-outline.svg" , "urlHover": "github-outline.svg"}, {"link": "https://smart-genie-ai.vercel.app", "name": "check it out", "url": "link-outline.svg" , "urlHover": "link-outline.svg"}]
-    }
-  
-  ]
-  
-  
+  {
+    "title": "Role-Based Access Control System",
+    "alias": "RBAC",
+    "headline": "Enterprise-grade security platform with dynamic permission management and JWT authentication",
+    "timeline": "November 2024",
+    "type": "project",
+    "tech": ["React.js", "Redux", "Express.js", "MongoDB", "JWT", "Axios"],
+    "searchDescription": "Comprehensive RBAC system with dynamic role assignment, permission management, and secure authentication",
+    "longDescription": "An RBAC system for secure role and permission management. Built with React, Redux, and Express, it provides CRUD for users/roles, JWT authentication, and dynamic access updates for enterprise use.",
+    "assests": "https://res.cloudinary.com/dz41q2wez/image/upload/v1736971899/Screenshot_2025-01-16_013934_im7roa.png",
+    "links": [
+      {"link": "https://github.com/sasaurabh11/Role-Based-Access-control", "name": "github", "url": "github-outline.svg", "urlHover": "github-outline.svg"},
+      {"link": "https://role-based-access-control-three.vercel.app/", "name": "check it out", "url": "link-outline.svg", "urlHover": "link-outline.svg"}
+    ]
+  },
+  {
+    "title": "Drive App - Seamless Document Management",
+    "alias": "DriveApp",
+    "headline": "Integrated document creation platform with Google Drive synchronization and collaborative editing",
+    "timeline": "February 2025",
+    "type": "project",
+    "tech": ["React", "Node.js", "Express", "MongoDB", "Google OAuth", "Google Drive API", "JWT"],
+    "searchDescription": "Full-stack document management system with Google Drive integration and collaborative editing features",
+    "longDescription": "A document management app with Google Drive sync. Users can log in with Google OAuth, create/edit docs, and auto-save them as Google Docs. Features JWT sessions, MongoDB storage, and collaboration support.",
+    "assests": "/drive-app.png",
+    "links": [
+      {"link": "https://github.com/sasaurabh11/Drive-app", "name": "github", "url": "github-outline.svg", "urlHover": "github-outline.svg"},
+      {"link": "https://drive-app-roan.vercel.app", "name": "check it out", "url": "link-outline.svg", "urlHover": "link-outline.svg"}
+    ]
+  },
+  {
+    "title": "Flight Finder - Smart Travel Companion",
+    "alias": "FlightFinder",
+    "headline": "Intelligent flight search platform with comprehensive price comparison and secure booking",
+    "timeline": "February 2025",
+    "type": "project",
+    "tech": ["React", "Express.js", "Clerk Authentication", "MongoDB", "Axios"],
+    "searchDescription": "Comprehensive flight search engine with real-time price comparison for one-way and round-trip bookings",
+    "longDescription": "A flight search engine with one-way and round-trip options. Built with React and Express, it integrates APIs for real-time prices, Clerk for authentication, and MongoDB for storing user preferences and history.",
+    "assests": "/FlightFinder.png",
+    "links": [
+      {"link": "https://github.com/sasaurabh11/flight-api", "name": "github", "url": "github-outline.svg", "urlHover": "github-outline.svg"},
+      {"link": "https://flight-api-blond.vercel.app", "name": "check it out", "url": "link-outline.svg", "urlHover": "link-outline.svg"}
+    ]
+  },
+  {
+    "title": "SnapSizzle - Dynamic Media Sharing Platform",
+    "alias": "SnapSizzle",
+    "headline": "Next.js-powered snap application with real-time notifications and seamless media exchange",
+    "timeline": "March 2024",
+    "type": "project",
+    "tech": ["Next.js", "Tailwind CSS", "Material-UI", "Server-Side Rendering"],
+    "searchDescription": "Modern snap-sharing application with real-time messaging, media sharing, and instant notifications",
+    "longDescription": "A social platform built with Next.js that enables users to share snaps, media, and messages in real time. Features instant notifications, responsive design, and smooth user experience using Tailwind and Material-UI.",
+    "assests": "https://res.cloudinary.com/dz41q2wez/video/upload/v1726757933/zsa6rooi3sgosbjv7hpg.mp4",
+    "links": [
+      {"link": "https://github.com/sasaurabh11/SnapSizzle", "name": "github", "url": "github-outline.svg", "urlHover": "github-outline.svg"},
+      {"link": "https://snap-sizzle.vercel.app/", "name": "check it out", "url": "link-outline.svg", "urlHover": "link-outline.svg"}
+    ]
+  },
+  {
+    "title": "ChatSpark - Advanced Real-Time Communication",
+    "alias": "ChatSpark",
+    "headline": "Feature-rich chat application with real-time translation, video calling, and comprehensive user management",
+    "timeline": "July 2024",
+    "type": "project",
+    "tech": ["React.js", "Vite", "Tailwind CSS", "Material-UI", "Express.js", "MongoDB", "Socket.IO", "WebRTC", "Cloudinary", "JWT"],
+    "searchDescription": "Real-time chat platform with video calling, multi-language translation, and advanced friend management system",
+    "longDescription": "A real-time chat app with Socket.IO for messaging, WebRTC for video calls, and translation features. Includes friend management, file sharing via Cloudinary, and secure JWT authentication.",
+    "assests": "https://res.cloudinary.com/dz41q2wez/video/upload/v1726757542/fwng9hur4zyqgz0fwdw6.mp4",
+    "links": [
+      {"link": "https://github.com/sasaurabh11/ChatSpark-Real-Time-Chat-App", "name": "github", "url": "github-outline.svg", "urlHover": "github-outline.svg"},
+      {"link": "https://chat-spark-app.vercel.app/", "name": "check it out", "url": "link-outline.svg", "urlHover": "link-outline.svg"}
+    ]
+  },
+  {
+    "title": "SmartGenie - AI-Powered Creative Platform",
+    "alias": "SmartGenie",
+    "headline": "Cutting-edge AI platform combining image generation, RAG-powered chatbot, and intelligent web summarization",
+    "timeline": "January 2025 - February 2025",
+    "type": "project",
+    "tech": ["React.js", "Vite", "Tailwind CSS 4.0", "Framer Motion", "Express.js", "MongoDB", "Google Generative AI", "LangChain", "Pinecone", "Cloudinary", "Razorpay"],
+    "searchDescription": "AI-powered platform for image generation, website summarization, and intelligent chatbot with RAG system",
+    "longDescription": "An AI SaaS platform featuring text-to-image generation, web summarization, and a RAG-powered chatbot using LangChain + Pinecone. Includes payment system via Razorpay, JWT auth, and Cloudinary for asset storage.",
+    "assests": "https://res.cloudinary.com/dz41q2wez/video/upload/v1741804212/Recording_2025-03-12_234241_iu1768.mp4",
+    "links": [
+      {"link": "https://github.com/sasaurabh11/SmartGenie", "name": "github", "url": "github-outline.svg", "urlHover": "github-outline.svg"},
+      {"link": "https://smart-genie-ai.vercel.app", "name": "check it out", "url": "link-outline.svg", "urlHover": "link-outline.svg"}
+    ]
+  }
+]

@@ -6,14 +6,9 @@ import projects from "../../data/projects.json";
 import experiences from "../../data/experience.json";
 import resume from "../../data/resume.json";
 import Image from "next/image";
-import { Worker, Viewer } from "@react-pdf-viewer/core";
-import { defaultLayoutPlugin } from "@react-pdf-viewer/default-layout";
-import "@react-pdf-viewer/core/lib/styles/index.css";
-import "@react-pdf-viewer/default-layout/lib/styles/index.css";
 
 export default function Search() {
   const [isHover, setIsHover] = useState(false);
-  const defaultLayoutPluginInstance = defaultLayoutPlugin();
   const searchParams = useSearchParams();
   const router = useRouter();
   const query = searchParams.get("q");
@@ -56,8 +51,8 @@ export default function Search() {
 
   useEffect(() => {
     if (project) {
-      const params = new URLSearchParams(searchParams); 
-      params.delete("p"); 
+      const params = new URLSearchParams(searchParams);
+      params.delete("p");
 
       (router.replace as unknown as (...args: any[]) => void)(
         `?${params.toString()}`,
@@ -80,8 +75,8 @@ export default function Search() {
         const imageUrl = `search-img/${data.alias}-icon.svg`;
         const img = new window.Image();
         img.src = imageUrl;
-        img.onload = () => setIsImageAvailable(true); 
-        img.onerror = () => setIsImageAvailable(false); 
+        img.onload = () => setIsImageAvailable(true);
+        img.onerror = () => setIsImageAvailable(false);
       }
     }, [data.alias]);
 
@@ -334,15 +329,38 @@ export default function Search() {
           {displayQuery !== "why-hire-saurabh" && (
             <div className="hidden w-1/3 p-2 h-[40rem] border-[0.05rem] border-white border-opacity-30 shadow-xl rounded-lg md:flex flex-col gap-y-3 ">
               {displayQuery === "resume" ? (
-                <div className="w-full h-full rounded-t-lg overflow-hidden shadow-lg rpv-core__viewer--dark">
-                  <Worker
-                    workerUrl={`https://unpkg.com/pdfjs-dist@3.0.279/build/pdf.worker.min.js`}
-                  >
-                    <Viewer
-                      fileUrl="Saurabh_Resume.pdf"
-                      plugins={[defaultLayoutPluginInstance]}
+                <div className="w-full h-full rounded-t-lg overflow-hidden shadow-2xl bg-white relative">
+                  {/* PDF Header Bar (Optional) */}
+                  <div className="bg-gradient-to-r from-slate-800 to-slate-700 p-3 flex items-center justify-between border-b border-slate-600">
+                    <div className="flex items-center space-x-3">
+                      <div className="flex space-x-1.5">
+                        <div className="w-3 h-3 rounded-full bg-red-500" />
+                        <div className="w-3 h-3 rounded-full bg-yellow-500" />
+                        <div className="w-3 h-3 rounded-full bg-green-500" />
+                      </div>
+                      <div className="text-white text-sm font-medium flex items-center space-x-2">
+                        <div
+                          className="w-4 h-4 bg-no-repeat bg-cover opacity-75"
+                          style={{ backgroundImage: "url(icons/document.svg)" }}
+                        />
+                        <span>Saurabh_Resume.png</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Image Container (Fits the frame) */}
+                  <div className="relative w-full h-[calc(100%-3rem)]">
+                    {" "}
+                    {/* Adjust height as needed */}
+                    <Image
+                      src="/resume-image.png"
+                      alt="Saurabh Resume"
+                      fill
+                      className="object-contain" 
+                      quality={100} 
+                      priority
                     />
-                  </Worker>
+                  </div>
                 </div>
               ) : (
                 <Image
@@ -361,7 +379,7 @@ export default function Search() {
                   </h2>
                   <h2 className="opacity-70 text-lg">
                     Currently, I'm working on specializing my technical skills
-                    in MERN stack, Next Js and BlockChain
+                    in MERN stack, Next Js and AI
                   </h2>
 
                   <div className="flex flex-col">

@@ -1,53 +1,112 @@
-import Socials from "@/components/Socials";
-import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import { FiDownload } from "react-icons/fi";
-import Photo from "@/components/Photo";
+import { Button } from "@/components/ui/button";
+import Socials from "@/components/Socials";
 
-function AboutPage() {
+export default function About() {
   return (
-    <section className="h-full p-10 text-white">
-      <div className=" container mx-auto h-full">
-        <div className="flex flex-col xl:flex-row items-center justify-between">
-          <div className="text-center xl:text-left">
-            <span className="text-xl">Software Developer</span>
-            <h1 className="h2 mb-6">
-              Hello I'm <br /> <span className="text-accent">Saurabh Jaiswar</span>
-            </h1>
-            <p className="max-w-[500pz] mb-9 text-white/80 ">
-              Hey everyone! I'm Saurabh, currently navigating the world of
-              BTech, my true passion lies in crafting sleek digital experiences.
-              I've immersed myself in Software Development, Web Development, and
-              Competitive Programming and I've honed my skills in frontend magic
-              with HTML, CSS, JAVASCRIPT , Tailwind, React and Next.js. On the
-              backend, I dance with Node js, Express js, Flask and MongoDB. With
-              over 1500+ DSA problems under my belt, solving complex problems is
-              what keeps me going. Join me on this journey as I turn ideas into
-              reality, one line of code at a time!
-            </p>
+    <div className="min-h-screen bg-gradient-to-br from-[#0F0F2D] to-[#1E1E4D] py-16 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto">
+        <div className="flex flex-col lg:flex-row gap-12 items-center">
+          {/* Profile Photo */}
+          <div className="w-full lg:w-1/3 flex justify-center">
+            <div 
+              className="w-64 h-64 md:w-80 md:h-80 rounded-full border-4 border-accent shadow-xl overflow-hidden bg-cover bg-center"
+              style={{ backgroundImage: `url("bg-photo.jpg")` }}
+            />
+          </div>
 
-            <div className="flex flex-col xl:flex-row items-center gap-8">
-              <a href="/Saurabh_Resume.pdf" download>
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className=" uppercase flex items-center gap-2"
-                >
-                  <span>Download CV</span>
-                  <FiDownload className="text-xl" />
-                </Button>
+          {/* Content */}
+          <div className="w-full lg:w-2/3 space-y-8">
+            <div className="space-y-2">
+              <span className="text-accent font-mono text-lg">Software Engineer & AI Developer</span>
+              <h1 className="text-4xl md:text-5xl font-bold text-white">
+                Hi, I'm <span className="text-accent">Saurabh Jaiswar</span>
+              </h1>
+              <p className="text-lg text-gray-300 leading-relaxed">
+                BTech in Computer Science from IIIT Vadodara with expertise in full-stack development and AI solutions. 
+                Passionate about building intelligent systems and scalable applications that solve real-world problems.
+              </p>
+            </div>
+
+            {/* Experience Highlights */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="bg-white/5 p-6 rounded-xl border border-white/10 backdrop-blur-sm">
+                <h3 className="text-accent font-semibold mb-2">AI Developer @ Nervesparks</h3>
+                <p className="text-gray-300 text-sm">
+                  Engineered AI-powered Teaching Agent using RAG architecture, boosting personalized learning by 65%.
+                </p>
+              </div>
+              <div className="bg-white/5 p-6 rounded-xl border border-white/10 backdrop-blur-sm">
+                <h3 className="text-accent font-semibold mb-2">Tech Intern @ Connexa</h3>
+                <p className="text-gray-300 text-sm">
+                  Built global professional search tool processing 100+ queries/minute for 1M+ database.
+                </p>
+              </div>
+            </div>
+
+            {/* Skills */}
+            <div className="space-y-4">
+              <h3 className="text-xl font-semibold text-white">Technical Expertise</h3>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  "Python", "JavaScript", "TypeScript", "React.js", "Next.js", 
+                  "Node.js", "Flask", "FastAPI", "MongoDB", "Docker", "AI/ML",
+                  "RAG Architecture", "WebSockets", "CI/CD"
+                ].map((skill) => (
+                  <span 
+                    key={skill}
+                    className="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <Link
+                href="/search?q=Saurabh-projects"
+                className="bg-accent hover:bg-accent-dark text-white px-6 py-3 rounded-lg font-medium transition-colors text-center"
+              >
+                Explore My Projects
+              </Link>
+              
+              <a href="/Saurabh_Resume.pdf" download className="flex items-center justify-center gap-2 border border-accent text-accent hover:bg-accent/10 px-6 py-3 rounded-lg font-medium transition-colors">
+                <span>Download CV</span>
+                <FiDownload className="text-lg" />
               </a>
-              <div className=" mb-8 xl:mb-0">
-                <Socials
-                  containerStyles="flex gap-6"
-                  iconStyles="w-9 h-9 border border-accent rounded-full flex  justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500"
+              
+              <div className="flex items-center justify-center">
+                <Socials 
+                  containerStyles="flex gap-4"
+                  iconStyles="w-10 h-10 border border-accent rounded-full flex justify-center items-center text-accent hover:bg-accent hover:text-white transition-colors"
                 />
               </div>
             </div>
           </div>
         </div>
+
+        {/* Achievements Section */}
+        <div className="mt-16 bg-white/5 p-8 rounded-2xl border border-white/10 backdrop-blur-sm">
+          <h2 className="text-2xl font-bold text-white mb-6 text-center">Notable Achievements</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { title: "LeetCode Knight", value: "Top 2.3%", desc: "Max Rating: 2022" },
+              { title: "CodeChef 4★", value: "Global Rank 5996", desc: "Out of 233,000" },
+              { title: "Problems Solved", value: "1800+", desc: "Across all platforms" },
+              { title: "Hackathons", value: "Meta Hacker Cup", desc: "Global Rank 1384" }
+            ].map((item, index) => (
+              <div key={index} className="bg-gradient-to-br from-accent/20 to-accent/5 p-5 rounded-xl text-center">
+                <p className="text-accent text-sm font-medium">{item.title}</p>
+                <p className="text-white text-2xl font-bold my-2">{item.value}</p>
+                <p className="text-gray-400 text-xs">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
-    </section>
+    </div>
   );
 }
-
-export default AboutPage;
