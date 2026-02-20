@@ -60,6 +60,31 @@
     ]
   },
   {
+    "title": "FocusMail AI Agent - Intelligent Email Automation System",
+    "alias": "FocusMail",
+    "headline": "AI-powered email triage, semantic search, and summarization agent built with ReAct architecture",
+    "timeline": "2025",
+    "type": "project",
+    "tech": ["LangGraph", "ReAct Agent", "NLP", "Gemini AI", "Vector Search", "Semantic Retrieval"],
+    "searchDescription": "AI email assistant for automated triage, summarization, and semantic search using ReAct agent architecture",
+    "longDescription": "An AI-driven email automation system that performs intelligent triage, semantic search, and contextual summarization using a ReAct-based agent workflow. Built with LangGraph orchestration and Gemini AI to process 300+ emails daily with high accuracy and significantly faster response time.",
+    "assests": "",
+    "links": [
+      {
+        "link": "https://github.com/sasaurabh11/email-agent.git",
+        "name": "github",
+        "url": "github-outline.svg",
+        "urlHover": "github-outline.svg"
+      },
+      {
+        "link": "https://email-agent-black.vercel.app",
+        "name": "check it out",
+        "url": "link-outline.svg",
+        "urlHover": "link-outline.svg"
+      }
+    ]
+  },
+  {
     "title": "ChatSpark - Advanced Real-Time Communication",
     "alias": "ChatSpark",
     "headline": "Feature-rich chat application with real-time translation, video calling, and comprehensive user management",

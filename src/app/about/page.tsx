@@ -32,13 +32,19 @@ export default function About() {
             {/* Experience Highlights */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-white/5 p-6 rounded-xl border border-white/10 backdrop-blur-sm">
+                <h3 className="text-accent font-semibold mb-2">Software Developer Intern @ Zuvees</h3>
+                <p className="text-gray-300 text-sm">
+                  Worked on Optimizing E-Commerce Plateform
+                </p>
+              </div>
+              <div className="bg-white/5 p-6 rounded-xl border border-white/10 backdrop-blur-sm">
                 <h3 className="text-accent font-semibold mb-2">Software Developer Intern @ Nervesparks</h3>
                 <p className="text-gray-300 text-sm">
                   Engineered AI-powered Teaching Agent.
                 </p>
               </div>
               <div className="bg-white/5 p-6 rounded-xl border border-white/10 backdrop-blur-sm">
-                <h3 className="text-accent font-semibold mb-2">Tech Intern @ Connexa</h3>
+                <h3 className="text-accent font-semibold mb-2">Software Engineer Intern @ Connexa</h3>
                 <p className="text-gray-300 text-sm">
                   Built global professional search tool.
                 </p>
@@ -93,10 +99,10 @@ export default function About() {
           <h2 className="text-2xl font-bold text-white mb-6 text-center">Notable Achievements</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { title: "LeetCode Knight", value: "Top 2.3%", desc: "Max Rating: 2022" },
-              { title: "CodeChef 4★", value: "Global Rank 5996", desc: "Out of 233,000" },
-              { title: "Problems Solved", value: "1800+", desc: "Across all platforms" },
-              { title: "Coding Contest", value: "Meta Hacker Cup", desc: "Global Rank 1384" }
+              { title: "ICPC Regionalist", value: "2025", desc: "Qualified among top teams in India" },
+              { title: "LeetCode Knight", value: "Top 1.6%", desc: "Max Rating: 2070" },
+              { title: "CodeChef 4★", value: "Global Rank 5446", desc: "Out of 233,000" },
+              { title: "Problems Solved", value: "2100+", desc: "Across all platforms" },
             ].map((item, index) => (
               <div key={index} className="bg-gradient-to-br from-accent/20 to-accent/5 p-5 rounded-xl text-center">
                 <p className="text-accent text-sm font-medium">{item.title}</p>
